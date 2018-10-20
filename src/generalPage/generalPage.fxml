@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="generalPage.GeneralController">
+   <children>
+      <Label layoutX="14.0" layoutY="5.0" text="Connection Status:" />
+      <Label fx:id="dbStatus" layoutX="154.0" layoutY="5.0" prefHeight="18.0" prefWidth="197.0" text="   " />
+      <TabPane layoutY="23.0" prefHeight="650.0" prefWidth="950.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Historical Pressure">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="266.0" layoutY="-7.0" prefHeight="605.0" prefWidth="684.0">
+                           <children>
+                              <TableView fx:id="pressureTable" prefHeight="606.0" prefWidth="683.0">
+                                <columns>
+                                  <TableColumn fx:id="yearCol" prefWidth="200.800048828125" text="Year" />
+                                  <TableColumn fx:id="minCol" prefWidth="248.79998779296875" text="Historical Minimum Average" />
+                                    <TableColumn fx:id="maxCol" prefWidth="235.199951171875" text="Historical Maximum Average" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="3.0" layoutY="-5.0" prefHeight="600.0" prefWidth="262.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="262.0" text="Enter Historical Pressure Data">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="yearField" promptText="Year">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="miniField" promptText="Historical Minimum Average">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="maxField" promptText="Historical Maximum Average">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button fx:id="addPressure" mnemonicParsing="false" prefHeight="26.0" prefWidth="238.0" text="Add Entry">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="clearFields" mnemonicParsing="false" prefHeight="26.0" prefWidth="238.0" text="Clear Form">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="loadPressureData" mnemonicParsing="false" prefHeight="26.0" prefWidth="238.0" text="Load Data">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
