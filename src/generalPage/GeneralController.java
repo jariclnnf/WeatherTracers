@@ -8,8 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
 import java.beans.PropertyVetoException;
 import java.net.URL;
 import java.sql.Connection;
